@@ -1,0 +1,167 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 9.5rem 1.2rem 2rem;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.card {
+  background-color: white;
+  text-align: center;
+  border-radius: 1.2rem;
+  background-image: url(images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  padding-right: 1.5rem;
+  position: absolute;
+  top: -6.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-text {
+  padding: 7rem 1.3rem 2rem;
+}
+
+.card-text h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+
+.accordion {
+  text-align: left;
+}
+
+.accordion-question {
+  border: none;
+  background: transparent;
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 0.4rem 0;
+  font-size: 0.89rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: hsl(237, 12%, 33%);
+}
+
+.accordion-question:hover {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
+.accordion-question-clicked {
+  font-weight: 700;
+  transition: all 0.1s ease-in;
+}
+
+.accordion-question-clicked img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in;
+}
+
+.accordion-question img {
+  width: 0.75rem;
+  height: 0.6rem;
+}
+
+.accordion-answer {
+  font-size: 0.89rem;
+  width: 90%;
+  line-height: 1.3rem;
+  color: hsl(240, 6%, 50%);
+  margin-top: -0.1rem;
+  display: none;
+}
+
+.accordion-answer-shown {
+  font-size: 0.89rem;
+  width: 90%;
+  line-height: 1.2rem;
+  color: hsl(237, 12%, 33%);
+  margin-top: -0.1rem;
+  display: block;
+}
+
+.accordion-content {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.attribution {
+  font-size: 11px;
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+  margin-top: 6rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 24%);
+}
+
+.desktop-image {
+  display: none;
+}
+
+.box-image {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 5rem 10rem;
+  }
+
+  .mobile-image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: block;
+  }
+
+  .card {
+    display: flex;
+    overflow: hidden;
+    text-align: left;
+    border-radius: 1.2rem;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left -8rem center;
+    background-size: contain;
+  }
+
+  .card-image img {
+    padding: 0;
+    position: relative;
+    top: 4.5rem;
+    left: -5rem;
+    transform: none;
+    overflow: hidden;
+  }
+
+  .card-text {
+    width: 90%;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    padding-right: 5rem;
+  }
+
+  .box-image {
+    display: inline;
+    position: absolute;
+    top: 18.2rem;
+    right: 68.26rem;
+    z-index: 2;
+  }
+}
